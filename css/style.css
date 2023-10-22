@@ -1,0 +1,753 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@900&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100vw;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+
+  padding-block: 1rem;
+  z-index: 99;
+  backdrop-filter: blur(10px);
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+}
+
+span {
+  color: blue;
+}
+
+.bold {
+  font-weight: 500;
+  font-style: italic;
+}
+
+header nav #toggle,
+header nav .menu-container {
+  display: none;
+}
+
+header nav ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+header nav ul li:hover a {
+  background-color: blue;
+  color: white;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  height: 100vh;
+  margin-inline: auto;
+  margin-top: 4rem;
+  padding: 2rem 4rem;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+main #beranda {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+main #beranda article {
+  flex: 1 1;
+}
+
+main #beranda article p {
+  margin-bottom: 1.5rem;
+}
+
+main #beranda article a {
+  padding: 0.7rem 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #2d3e50;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main #beranda article a:hover {
+  background-color: blue;
+}
+
+main #beranda .gambar-beranda {
+  flex: 1;
+  display: flex;
+}
+
+main #beranda .gambar-beranda img {
+  margin: auto;
+  min-width: 250px;
+  width: 19rem;
+  border-radius: 30%;
+}
+
+main #beranda aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  z-index: 999;
+  right: 0;
+  top: 20%;
+}
+
+main #beranda aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main #beranda aside .social-media ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: blue;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main #beranda aside .social-media li {
+  list-style-type: none;
+}
+
+main #beranda aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+main #beranda aside .social-media li a:hover {
+  color: #2d3e50;
+}
+
+main #produk {
+  position: absolute;
+  bottom: -40rem;
+  width: 80%;
+  height: 100vh;
+  padding-block: 5rem;
+}
+
+main #produk .title {
+  text-align: center;
+}
+
+main #produk .card-container {
+  width: 100%;
+  height: 100%;
+  margin: 1rem;
+  padding: 3rem;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main #produk .card {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  width: 15rem;
+  height: 18rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+main #produk .card p,
+main #produk .card h1,
+main #produk .card h3 {
+  text-align: center;
+}
+
+main #produk .card h1 {
+  margin-block: 1rem;
+}
+
+main #produk .card h3 {
+  margin-block-end: 0.3rem;
+}
+
+main #produk .card button {
+  position: relative;
+  bottom: -20px;
+  padding: 0.5rem 1.5rem;
+  margin-block-start: 0.5rem;
+  margin-inline: 5%;
+
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+
+  border: 0;
+  background-color: blue;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main #produk .card button:hover {
+  background-color: rgb(2, 2, 131);
+}
+
+main #testimoni {
+  position: absolute;
+  bottom: -80rem;
+  width: 80%;
+  height: 100vh;
+  padding-block: 5rem;
+}
+
+main #testimoni .title {
+  text-align: center;
+}
+
+main #testimoni .card-container {
+  width: 100%;
+  height: 100%;
+  margin: 1rem;
+  padding: 3rem;
+  flex-wrap: wrap;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+main #testimoni .card {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  width: 16rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+}
+
+main #testimoni .card img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  position: relative;
+  bottom: 0.5rem;
+  right: 4rem;
+  border: 3px solid blue;
+}
+
+main #testimoni .card .text {
+  margin-left: -3.5rem;
+}
+
+main #testimoni .card .text h4 {
+  font-weight: 600;
+}
+
+main #testimoni .card .text p {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+main #tentang {
+  position: absolute;
+  bottom: -120rem;
+  width: 80%;
+  height: 100vh;
+  padding-block: 5rem;
+}
+
+main #tentang .title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main #tentang .deskripsi {
+  margin-block: 0.5rem;
+  text-align: center;
+}
+
+main #tentang .title-card {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+main #tentang .card-container {
+  width: 100%;
+  height: 80%;
+  margin: 1rem;
+  padding: 3rem;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main #tentang .card {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  width: 15rem;
+  height: 15rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+main #tentang .card a img {
+  width: 3rem;
+  height: 3rem;
+}
+
+main #tentang .card p {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem;
+}
+
+footer {
+  box-sizing: border-box;
+  background-color: blue;
+  position: absolute;
+  bottom: -150rem;
+  width: 100%;
+  max-width: 100vw;
+  padding: 2rem 5rem;
+}
+
+footer .container .row {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 5rem;
+}
+
+footer .container .row .col ul li {
+  list-style: none;
+}
+
+footer .container .row .col ul li a {
+  text-decoration: none;
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem;
+  color: white;
+}
+
+footer .container .row .col ul li:hover {
+  transform: translateX(0.25rem);
+}
+
+footer .container .row .col .social-links a {
+  color: white;
+  margin: 0.15rem;
+}
+
+/* tablet device */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  header .logo {
+    margin-bottom: 1rem;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main {
+    margin-top: 8rem;
+    padding: 1rem 3rem;
+  }
+
+  main #beranda,
+  main #produk,
+  main #testimoni,
+  main #tentang {
+    padding-top: 7rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main #beranda article p {
+    font-size: 1rem;
+  }
+
+  main #beranda .gambar-beranda {
+    order: -1;
+  }
+
+  main #produk {
+    bottom: -46rem;
+  }
+
+  main #produk .card-container {
+    padding: 1rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    height: fit-content;
+  }
+
+  main #produk .card {
+    width: 11rem;
+    height: 13rem;
+    padding: 0.5rem;
+  }
+
+  main #produk .card p {
+    font-size: 0.9rem;
+  }
+
+  main #produk .card h1 {
+    margin-block: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  main #produk .card h3 {
+    margin-block-end: 0.3rem;
+    font-size: 1rem;
+  }
+
+  main #produk .card button {
+    bottom: 0px;
+    padding: 0.5rem 1rem;
+    margin-block-start: 0.5rem;
+    margin-inline: 6%;
+    font-size: 0.8rem;
+  }
+
+  main #testimoni {
+    bottom: -85rem;
+  }
+
+  main #testimoni .card-container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 2.5rem;
+  }
+
+  main #testimoni .card {
+    width: 13rem;
+    height: 5rem;
+    padding: 0.2rem;
+  }
+
+  main #testimoni .card img {
+    width: 4rem;
+    height: 4rem;
+    bottom: -0.3rem;
+    right: 2rem;
+  }
+
+  main #testimoni .card .text {
+    margin-left: -1.9rem;
+  }
+
+  main #testimoni .card .text h4 {
+    font-size: 0.8rem;
+  }
+
+  main #testimoni .card .text p {
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+  }
+
+  main #tentang {
+    position: absolute;
+    bottom: -125rem;
+    width: 80%;
+    height: 100vh;
+    padding-block: 7rem;
+  }
+
+  main #tentang .card-container {
+    padding: 1rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    height: fit-content;
+  }
+
+  main #tentang .card {
+    width: 11rem;
+    height: 13rem;
+    padding: 0.5rem;
+  }
+
+  footer {
+    bottom: -170rem;
+    padding: 0;
+  }
+
+  footer .container .row {
+    justify-content: space-evenly;
+    padding: 2rem 0;
+  }
+}
+
+/* mobile design */
+@media screen and (max-width: 640px) {
+  header {
+    justify-content: space-between;
+    flex-direction: row;
+    height: 4rem;
+    padding: 0 1rem;
+    align-items: center;
+  }
+
+  header .logo {
+    margin: 0;
+    padding: 0;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    display: inline-block;
+    z-index: 999;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    box-sizing: border-box;
+    margin-right: 1rem;
+  }
+
+  .menu div {
+    position: relative;
+    margin: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 990;
+  }
+
+  .menu span {
+    position: absolute;
+    border-radius: 0.3rem;
+    width: 2rem;
+    height: 0.3rem;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s, width 0.5s;
+    background-color: blue;
+    z-index: 991;
+  }
+
+  .menu .line-1 {
+    transform: translate(-50%, -10px);
+  }
+
+  .menu .line-3 {
+    transform: translate(-50%, 5px);
+  }
+
+  header nav .ulopen {
+    display: inline-block;
+    height: 11rem;
+    width: 7rem;
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  header .ulopen li {
+    display: block;
+    margin: 0;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  header .ulopen li:hover {
+    background-color: blue;
+  }
+  header .ulopen li:hover a {
+    background-color: none;
+  }
+  header .ulopen li a {
+    padding: 0;
+  }
+
+  /* animation */
+  .openmenu .line-1 {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .openmenu .line-3 {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .openmenu .line-2 {
+    width: 0;
+  }
+
+  main #beranda {
+    padding-top: 4rem;
+  }
+
+  main #beranda aside .social-media ul {
+    padding: 1.2rem 0.7rem;
+    gap: 1rem;
+  }
+
+  main #beranda aside .social-media li a {
+    font-size: 1.2rem;
+  }
+
+  main #produk {
+    bottom: -60rem;
+  }
+
+  main #produk .card-container {
+    position: relative;
+    right: 1.5rem;
+    width: 22rem;
+    margin: 1rem 0;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  main #produk .card {
+    width: 10rem;
+    height: 12rem;
+    padding: 0.5rem;
+  }
+
+  main #produk .card h1 {
+    margin-block: 0.1rem;
+    font-size: 1.7rem;
+  }
+
+  main #produk .card h3 {
+    font-size: 0.9rem;
+  }
+
+  main #produk .card button {
+    margin-inline: 0.5rem;
+  }
+
+  main #testimoni {
+    bottom: -100rem;
+  }
+
+  main #testimoni .card-container {
+    position: relative;
+    top: 2rem;
+    right: 1.8rem;
+    height: 33rem;
+    width: 22rem;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  main #testimoni .card {
+    width: 10rem;
+    height: 8.5rem;
+    padding: 0.5rem;
+  }
+
+  main #testimoni .card img {
+    width: 4rem;
+    height: 4rem;
+    bottom: 2.5rem;
+    left: 2.6rem;
+  }
+
+  main #testimoni .card .text {
+    margin-left: -3.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  main #tentang {
+    position: absolute;
+    right: 2.5rem;
+    bottom: -145rem;
+  }
+
+  main #tentang .card-container {
+    position: relative;
+    right: 1.2rem;
+    width: 22rem;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  main #tentang .card {
+    width: 10rem;
+    height: 13rem;
+    padding: 0.5rem;
+  }
+
+  footer {
+    bottom: -190rem;
+    padding-top: 1.5rem;
+    padding-inline: 1rem;
+  }
+
+  footer .container .row {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  
+  footer .container .row .col {
+    margin: 0.5rem;
+  }
+}
